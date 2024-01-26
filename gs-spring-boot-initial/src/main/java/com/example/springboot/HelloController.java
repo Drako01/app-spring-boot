@@ -16,7 +16,7 @@ public class HelloController {
     }
     
     @GetMapping("/productos")
-    public String otraPagina(Model model) {    	
+    public String productos(Model model) {    	
     	model.addAttribute("imagePath", "img/spring.png");
         model.addAttribute("pageTitle", "Productos");
         model.addAttribute("titulo", "Productos");
