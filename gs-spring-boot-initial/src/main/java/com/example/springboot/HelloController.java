@@ -10,7 +10,7 @@ public class HelloController {
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("imagePath", "img/spring.png");
-        model.addAttribute("pageTitle", "Página de Inicio");
+        model.addAttribute("pageTitle", "Bienvenidos");
         model.addAttribute("titulo", "Mi Primer App en");
         return "index";
     }
