@@ -201,3 +201,6 @@ footer p {
 	box-shadow: 0px 5px 15px var(--blur);
 	margin-bottom: 2rem;
 }
+.usuarios-table{
+	margin-top: 3rem;
+}
