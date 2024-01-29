@@ -3,21 +3,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" th:replace="layout">
 <head>
-    <title th:text="${pageTitle}">Productos</title>
+<title th:text="${pageTitle}">Productos</title>
 </head>
 <body>
-    <div th:fragment="content">
-        <div class='container products'>
-            <div class="card" th:each="producto : ${productos}" style="width: 18rem;">
-                <img th:src="${producto.imagen}" class="card-img-top" alt="...">
-                <div class='line'></div>
-                <div class="card-body">
-                    <h5 class="card-title" th:text="${producto.nombre}"></h5>
-                    <p class="card-text" th:text="${producto.descripcion}"></p>
-                    <a href="#" class="btn btn-primary">COMPRAR</a>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div th:fragment="content">
+		<div class='container products'>
+			<div class="card" th:each="producto : ${productos}"
+				style="width: 18rem;">
+				<img th:src="${producto.imagen}" class="card-img-top" alt="...">
+				<div class='line'></div>
+				<div class="card-body">
+					<h5 class="card-title" th:text="${producto.nombre}"></h5>
+					<p class="card-text" th:text="${producto.descripcion}"></p>
+					<p class="card-text"
+						th:text="'Stock: ' + ${producto.stock} + ' Unid.'"></p>
+					<p class="card-text"
+						th:text="'Precio: $ ' + ${producto.price} + '.-'"></p>
+					<a href="#" class="btn btn-primary">COMPRAR</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
