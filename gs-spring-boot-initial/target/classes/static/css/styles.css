@@ -191,6 +191,7 @@ footer p {
 	width: calc(100% - 1.5rem) !important;
 	object-fit: cover;
 	margin: auto;
+	min-height: 240px;
 }
 .card .line{
 	width: calc(100% - 1.5rem) !important;
