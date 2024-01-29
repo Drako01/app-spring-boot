@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2024 a las 17:50:43
+-- Tiempo de generación: 29-01-2024 a las 22:13:03
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -66,6 +66,26 @@ INSERT INTO `producto` (`id`, `descripcion`, `imagen`, `nombre`, `price`, `stock
 (23, 'Las Peras mas ricas y dulces del mercado.', 'https://puntovegetal.com.ar/static/media/productos/pera.png', 'Peras', 99.87, 1214),
 (24, 'Las manzanas mas deliciosas y tiernas de todas.', 'https://almacen.do/wp-content/uploads/2020/12/Manzanas-Rojas_-1-lb-Front.jpg', 'Manzana', 87.6, 1237);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` bigint(20) NOT NULL,
+  `correo` varchar(255) DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `correo`, `nombre`, `password`) VALUES
+(1, 'alejandro@mail.com', 'Alejandro', 'Password');
+
 --
 -- Índices para tablas volcadas
 --
@@ -77,6 +97,12 @@ ALTER TABLE `producto`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -85,6 +111,12 @@ ALTER TABLE `producto`
 --
 ALTER TABLE `producto`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
