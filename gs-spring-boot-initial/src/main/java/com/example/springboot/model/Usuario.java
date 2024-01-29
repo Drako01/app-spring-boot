@@ -1,4 +1,7 @@
 package com.example.springboot.model;
+
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,6 +15,8 @@ public class Usuario {
 
     private String nombre;
     private String correo;
+    private String password;
+    
 	public Long getId() {
 		return id;
 	}
@@ -30,5 +35,12 @@ public class Usuario {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-   
+	public void setPassword(String password) {
+        
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

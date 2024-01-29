@@ -1,0 +1,11 @@
+com\example\springboot\model\Usuario.class
+com\example\springboot\service\UsuarioService.class
+com\example\springboot\service\ProductoService.class
+com\example\springboot\repository\ProductoRepository.class
+com\example\springboot\controller\ProductoController.class
+com\example\springboot\HelloController.class
+com\example\springboot\model\Producto.class
+com\example\springboot\repository\UsuarioRepository.class
+com\example\springboot\Application.class
+com\example\springboot\controller\UsuarioController.class
+com\example\springboot\service\impl\ProductoServiceImpl.class
