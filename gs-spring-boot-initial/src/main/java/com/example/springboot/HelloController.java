@@ -20,7 +20,7 @@ public class HelloController {
     
 	@GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("imagePath", "img/spring.png");
+        model.addAttribute("imagePath", "/img/spring.png");
         model.addAttribute("pageTitle", "Bienvenidos");
         model.addAttribute("titulo", "Mi Primer App en");
         return "index";
@@ -36,7 +36,7 @@ public class HelloController {
     public String productos(Model model) {
         List<Producto> productos = productoService.obtenerTodosProductos();
         model.addAttribute("productos", productos);
-        model.addAttribute("imagePath", "img/spring.png");
+        model.addAttribute("imagePath", "/img/spring.png");
         model.addAttribute("pageTitle", "Productos");
         model.addAttribute("titulo", "Productos");
         return "productos";
@@ -48,7 +48,7 @@ public class HelloController {
     public String usuarios(Model model) {
         List<Usuario> usuarios = usuarioService.obtenerTodosUsuarios();
         model.addAttribute("usuarios", usuarios);
-        model.addAttribute("imagePath", "img/spring.png");
+        model.addAttribute("imagePath", "/img/spring.png");
         model.addAttribute("pageTitle", "Usuarios");
         model.addAttribute("titulo", "Usuarios");
         return "usuarios";

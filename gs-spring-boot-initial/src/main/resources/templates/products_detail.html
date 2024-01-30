@@ -1,0 +1,19 @@
+<!-- src/main/resources/templates/products_detail.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout}">
+
+<body>
+	<div th:fragment="content">		
+		<div class="container product-details">
+			<h2 th:text="${producto.nombre}"></h2>
+			<img th:src="${producto.imagen}" alt="Product Image" class="detalles">
+			<p th:text="${producto.descripcion}"></p>
+			<p th:text="'Stock: ' + ${producto.stock} + ' Unid.'"></p>
+			<p th:text="'Precio: $ ' + ${producto.price} + '.-'"></p>
+			<a th:href="@{/productos}"
+				class="btn btn-secondary">VOLVER</a>
+		</div>
+	</div>
+</body>
+</html>

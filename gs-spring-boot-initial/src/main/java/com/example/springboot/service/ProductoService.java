@@ -9,4 +9,6 @@ import java.util.List;
 public interface ProductoService {
 
     List<Producto> obtenerTodosProductos();
+    Producto crearProducto(Producto producto);
+    Producto obtenerProductoPorId(Long id);
 }
