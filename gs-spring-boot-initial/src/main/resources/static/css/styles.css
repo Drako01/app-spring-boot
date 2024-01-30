@@ -201,10 +201,14 @@ footer p {
 	gap: 1rem;
 	flex-wrap: wrap;
 }
-.card img{
+.foto-producto {
 	width: calc(100% - 1.5rem) !important;
+	height: 280px;
 	object-fit: cover;
 	margin: auto;
+}
+.card img{
+	
 	min-height: 240px;
 }
 .card .line{
