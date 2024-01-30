@@ -19,7 +19,7 @@
 						th:text="'Precio: $ ' + ${producto.price} + '.-'"></p>
 					<a href="#" class="btn btn-primary">COMPRAR</a> 
 					<a
-						th:href="@{/productos/{id}(id=${producto.id})}"
+						th:href="@{/productos/detalles/{id}(id=${producto.id})}"
 						class="btn btn-secondary">DETALLES</a>
 				</div>
 			</div>
