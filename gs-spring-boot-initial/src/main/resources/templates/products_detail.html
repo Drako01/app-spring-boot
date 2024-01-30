@@ -13,7 +13,10 @@
 			<p th:text="'Precio: $ ' + ${producto.price} + '.-'"></p>
 			<a th:href="@{/productos}" class="btn btn-secondary">VOLVER</a> <a
 				th:href="@{'/productos/modificar/' + ${producto.id}}"
-				class="btn btn-primary">MODIFICAR</a>
+				class="btn btn-primary">MODIFICAR</a> <a
+				th:href="@{'/productos/eliminar/' + ${producto.id}}"
+				class="btn btn-danger">ELIMINAR</a>
+
 		</div>
 	</div>
 </body>

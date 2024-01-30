@@ -44,7 +44,10 @@ public class ProductoServiceImpl implements ProductoService {
     public Producto actualizarProducto(Long id, Producto producto) {
         return productoRepository.save(producto);
     }
-
+    @Override
+    public void eliminarProductoPorId(Long id) {
+        productoRepository.deleteById(id);
+    }
 
     
 }
