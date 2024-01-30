@@ -17,10 +17,10 @@
 						th:text="'Stock: ' + ${producto.stock} + ' Unid.'"></p>
 					<p class="card-text"
 						th:text="'Precio: $ ' + ${producto.price} + '.-'"></p>
-					<a href="#" class="btn btn-primary">COMPRAR</a> 
+					<a href="#" class="btn btn-success">COMPRAR</a> 
 					<a
 						th:href="@{/productos/detalles/{id}(id=${producto.id})}"
-						class="btn btn-secondary">DETALLES</a>
+						class="btn btn-info">DETALLES</a>
 				</div>
 			</div>
 		</div>
