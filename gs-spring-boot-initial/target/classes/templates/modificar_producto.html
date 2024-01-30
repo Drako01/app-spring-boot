@@ -1,0 +1,82 @@
+<!-- src/main/resources/templates/modificar_producto.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout}">
+
+<body>
+	<div th:fragment="content">
+		<div class="container">
+			<form th:action="@{'/productos/modificar/' + ${nuevoProducto.id}}"
+				th:object="${nuevoProducto}" method="post">
+				<div class="mb-3">
+					<label for="nombre" class="form-label">Nombre:</label> <input
+						type="text" class="form-control" id="nombre" th:field="*{nombre}"
+						value="*{nombre}" required>
+				</div>
+				<div class="mb-3">
+					<label for="descripcion" class="form-label">Descripción:</label>
+					<textarea class="form-control" id="descripcion"
+						th:field="*{descripcion}" value="*{descripcion}" required></textarea>
+				</div>
+				<div class="mb-3">
+					<label for="imagen" class="form-label">URL de la Imagen:</label> <input
+						type="text" class="form-control" id="imagen" th:field="*{imagen}"
+						value="*{imagen}" required>
+				</div>
+				<div class="mb-3">
+					<label for="price" class="form-label">Precio:</label> <input
+						type="number" class="form-control" id="price" th:field="*{price}"
+						value="*{price}" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="stock" class="form-label">Stock:</label> <input
+						type="number" class="form-control" id="stock" th:field="*{stock}"
+						value="*{stock}" required>
+				</div>
+
+
+				<button type="submit" class="btn btn-primary"
+					id="btnModificarProducto">Modificar Producto</button>
+
+
+			</form>
+
+		</div>
+	</div>
+	<!-- Modal de confirmación -->
+	<div class="modal fade" id="confirmarModal" tabindex="-1" role="dialog"
+		aria-labelledby="confirmarModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="confirmarModalLabel">Producto
+						Modificado</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">El producto ha sido modificado con
+					éxito.</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:inline="javascript">
+		/* Activar el modal después de enviar el formulario con jQuery */
+		$(document).ready(function() {
+			$('#btnModificarProducto').click(function() {
+				$('#confirmarModal').modal('show');
+			});
+		});
+	</script>
+
+
+
+</body>
+
+</html>

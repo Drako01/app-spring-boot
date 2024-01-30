@@ -2,13 +2,14 @@
 
 package com.example.springboot.service.impl;
 
-import com.example.springboot.model.Producto;
-import com.example.springboot.repository.ProductoRepository;
-import com.example.springboot.service.ProductoService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.springboot.model.Producto;
+import com.example.springboot.repository.ProductoRepository;
+import com.example.springboot.service.ProductoService;
 
 @Service
 public class ProductoServiceImpl implements ProductoService {
@@ -35,5 +36,15 @@ public class ProductoServiceImpl implements ProductoService {
         return productoRepository.findById(id).orElse(null);
     }
     
+    @Override
+    public Producto actualizarProductoPorId(Long id) {
+        return productoRepository.findById(id).orElse(null);
+    }
+    @Override
+    public Producto actualizarProducto(Long id, Producto producto) {
+        return productoRepository.save(producto);
+    }
+
+
     
 }
