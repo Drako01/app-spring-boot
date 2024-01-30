@@ -125,7 +125,7 @@ label {
 }
 h1{
 	text-align: center;
-	margin-top: 5rem;
+	margin-top: 8rem;
 	color: var(--first);
 }
 .product-details,
@@ -190,7 +190,9 @@ footer p {
     padding: calc(0.5 * var(--small));
     font-size: calc(1.1 * var(--small));
 }
-
+.container {
+	margin-top: 2rem;
+}
 .products{
 	display: flex;
 	padding: 2rem;
