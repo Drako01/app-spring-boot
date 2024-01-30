@@ -11,12 +11,14 @@
 			<p th:text="${producto.descripcion}"></p>
 			<p th:text="'Stock: ' + ${producto.stock} + ' Unid.'"></p>
 			<p th:text="'Precio: $ ' + ${producto.price} + '.-'"></p>
+			<div class="botones">
 			<a th:href="@{/productos}" class="btn btn-secondary">VOLVER</a> <a
 				th:href="@{'/productos/modificar/' + ${producto.id}}"
 				class="btn btn-primary">MODIFICAR</a> <a
 				th:href="@{'/productos/eliminar/' + ${producto.id}}"
 				class="btn btn-danger">ELIMINAR</a>
 
+			</div>
 		</div>
 	</div>
 </body>

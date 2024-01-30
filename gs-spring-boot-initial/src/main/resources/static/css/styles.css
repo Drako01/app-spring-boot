@@ -126,13 +126,16 @@ label {
 h1{
 	text-align: center;
 	margin-top: 5rem;
+	color: var(--first);
 }
-
-.inicio{
+.product-details,
+.inicio {
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
     align-items: center;
 }
+
 .imagen-init{
 	max-width: 680px;
 }
@@ -214,6 +217,13 @@ footer p {
 .usuarios-table{
 	margin-top: 3rem;
 }
+.product-details{
+	padding: 3rem;
+}
+.botones{
+	gap:1rem;
+}
 .product-details img{
 	max-width: 420px;
 }
+

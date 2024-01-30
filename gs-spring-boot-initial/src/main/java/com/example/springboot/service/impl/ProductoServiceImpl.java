@@ -23,7 +23,7 @@ public class ProductoServiceImpl implements ProductoService {
 
     @Override
     public List<Producto> obtenerTodosProductos() {
-        return productoRepository.findAll();
+        return productoRepository.findAllRandom();
     }
     
     @Override
@@ -32,20 +32,20 @@ public class ProductoServiceImpl implements ProductoService {
     }
     
     @Override
-    public Producto obtenerProductoPorId(Long id) {
+    public Producto obtenerProductoPorId(Integer id) {
         return productoRepository.findById(id).orElse(null);
     }
     
     @Override
-    public Producto actualizarProductoPorId(Long id) {
+    public Producto actualizarProductoPorId(Integer id) {
         return productoRepository.findById(id).orElse(null);
     }
     @Override
-    public Producto actualizarProducto(Long id, Producto producto) {
+    public Producto actualizarProducto(Integer id, Producto producto) {
         return productoRepository.save(producto);
     }
     @Override
-    public void eliminarProductoPorId(Long id) {
+    public void eliminarProductoPorId(Integer id) {
         productoRepository.deleteById(id);
     }
 

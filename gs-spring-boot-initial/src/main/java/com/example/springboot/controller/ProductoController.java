@@ -35,7 +35,8 @@ public class ProductoController {
 	}
 
 	@PostMapping("/agregar")
-	public ModelAndView crearProducto(@ModelAttribute("nuevoProducto") Producto nuevoProducto, Model model) {
+	public ModelAndView crearProducto(@ModelAttribute("nuevoProducto") 
+	Producto nuevoProducto, Model model) {
 
 		if (nuevoProducto == null) {
 
@@ -57,7 +58,7 @@ public class ProductoController {
 	}
 
 	@GetMapping("/detalles/{id}")
-	public String obtenerDetallesProducto(@PathVariable Long id, Model model) {
+	public String obtenerDetallesProducto(@PathVariable Integer id, Model model) {
 		Producto producto = productoService.obtenerProductoPorId(id);
 		if (producto != null) {
 
@@ -73,7 +74,7 @@ public class ProductoController {
 	}
 
 	@GetMapping("/modificar/{id}")
-	public String mostrarFormularioModificar(@PathVariable Long id, Model model) {
+	public String mostrarFormularioModificar(@PathVariable Integer id, Model model) {
 		Producto producto = productoService.obtenerProductoPorId(id);
 
 		if (producto != null) {
@@ -89,7 +90,7 @@ public class ProductoController {
 	}
 
 	@PostMapping("/modificar/{id}")
-	public ModelAndView actualizarProducto(@PathVariable Long id,
+	public ModelAndView actualizarProducto(@PathVariable Integer id,
 			@ModelAttribute("nuevoProducto") Producto productoModificado, Model model) {
 		Producto productoExistente = productoService.obtenerProductoPorId(id);
 
@@ -114,7 +115,7 @@ public class ProductoController {
 	}
 
 	@GetMapping("/eliminar/{id}")
-	public String eliminarProducto(@PathVariable Long id) {
+	public String eliminarProducto(@PathVariable Integer id) {
 		productoService.eliminarProductoPorId(id);
 		return "redirect:/productos";
 	}
