@@ -1,6 +1,5 @@
 package com.example.springboot.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,7 @@ public class ProductoController {
 
 	private final ProductoService productoService;
 
-	@Autowired
+	
 	public ProductoController(ProductoService productoService) {
 		this.productoService = productoService;
 	}
@@ -65,11 +64,14 @@ public class ProductoController {
 			model.addAttribute("producto", producto);
 			model.addAttribute("imagePath", "/img/spring.png");
 			model.addAttribute("pageTitle", "Detalles del Producto");
-			model.addAttribute("titulo", "Detalles del Producto");
+			model.addAttribute("titulo", "Detalles del Producto");			
 			return "products_detail";
 		} else {
-
-			return "error";
+			model.addAttribute("pageTitle", "Error 404 - El producto no existe.");
+	    	model.addAttribute("imagePath", "/img/spring.png");
+	        model.addAttribute("imageError", "/img/sinstock.png");       
+	        model.addAttribute("titulo", "El producto " + id + " no existe o no hay Stock.");
+			return "error-product";
 		}
 	}
 
