@@ -2,7 +2,6 @@ package com.example.springboot;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +25,6 @@ public class HelloController {
         return "index";
     }
 	
-    @Autowired
     public HelloController(ProductoService productoService, UsuarioService usuarioService) {
         this.productoService = productoService;
         this.usuarioService = usuarioService;
@@ -53,5 +51,6 @@ public class HelloController {
         model.addAttribute("titulo", "Usuarios");
         return "usuarios";
     }
+    
 }
 
