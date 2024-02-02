@@ -27,7 +27,7 @@ public class ProductoController {
 	public String mostrarFormularioAgregar(Model model) {
 
 		model.addAttribute("imagePath", "/img/spring.png");
-		model.addAttribute("pageTitle", "Agregar Producto");
+		model.addAttribute("pageTitle", "Agregar Producto | App Spring Boot");
 		model.addAttribute("titulo", "Agregar Producto");
 		model.addAttribute("nuevoProducto", new Producto());
 		return "productos_agregar";
@@ -46,7 +46,7 @@ public class ProductoController {
 		if (productoCreado != null) {
 
 			model.addAttribute("imagePath", "/img/spring.png");
-			model.addAttribute("pageTitle", "Agregar Producto");
+			model.addAttribute("pageTitle", "Agregar Producto | App Spring Boot");
 			model.addAttribute("titulo", "Agregar Producto");
 			model.addAttribute("nuevoProducto", new Producto());
 			return new ModelAndView("productos_agregar");
@@ -63,7 +63,7 @@ public class ProductoController {
 
 			model.addAttribute("producto", producto);
 			model.addAttribute("imagePath", "/img/spring.png");
-			model.addAttribute("pageTitle", "Detalles del Producto");
+			model.addAttribute("pageTitle", "Detalles del Producto | App Spring Boot");
 			model.addAttribute("titulo", "Detalles del Producto");			
 			return "products_detail";
 		} else {
@@ -81,7 +81,7 @@ public class ProductoController {
 
 		if (producto != null) {
 			model.addAttribute("imagePath", "/img/spring.png");
-			model.addAttribute("pageTitle", "Modificar Producto");
+			model.addAttribute("pageTitle", "Modificar Producto | App Spring Boot");
 			model.addAttribute("titulo", "Modificar Producto");
 			model.addAttribute("nuevoProducto", producto);
 			return "modificar_producto";
@@ -106,7 +106,7 @@ public class ProductoController {
 			productoService.actualizarProducto(id, productoExistente);
 
 			model.addAttribute("imagePath", "/img/spring.png");
-			model.addAttribute("pageTitle", "Modificar Producto");
+			model.addAttribute("pageTitle", "Modificar Producto | App Spring Boot");
 			model.addAttribute("titulo", "Modificar Producto");
 			model.addAttribute("nuevoProducto", productoExistente);
 

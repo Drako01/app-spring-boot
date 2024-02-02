@@ -20,7 +20,7 @@ public class HelloController {
 	@GetMapping("/")
     public String index(Model model) {
         model.addAttribute("imagePath", "/img/spring.png");
-        model.addAttribute("pageTitle", "Bienvenidos");
+        model.addAttribute("pageTitle", "Bienvenidos | App Spring Boot");
         model.addAttribute("titulo", "Mi Primer App en");
         return "index";
     }
@@ -35,7 +35,7 @@ public class HelloController {
         List<Producto> productos = productoService.obtenerTodosProductos();
         model.addAttribute("productos", productos);
         model.addAttribute("imagePath", "/img/spring.png");
-        model.addAttribute("pageTitle", "Productos");
+        model.addAttribute("pageTitle", "Productos | App Spring Boot");
         model.addAttribute("titulo", "Productos");
         return "productos";
     }
@@ -47,10 +47,19 @@ public class HelloController {
         List<Usuario> usuarios = usuarioService.obtenerTodosUsuarios();
         model.addAttribute("usuarios", usuarios);
         model.addAttribute("imagePath", "/img/spring.png");
-        model.addAttribute("pageTitle", "Usuarios");
+        model.addAttribute("pageTitle", "Usuarios | App Spring Boot");
         model.addAttribute("titulo", "Usuarios");
         return "usuarios";
     }
     
+    
+    @GetMapping("/login")
+    public String login(Model model) {
+        
+        model.addAttribute("imagePath", "/img/spring.png");
+        model.addAttribute("pageTitle", "Login | App Spring Boot");
+        model.addAttribute("titulo", "Login");
+        return "login";
+    }
 }
 
