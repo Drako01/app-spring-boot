@@ -52,7 +52,7 @@ public class HelloController {
         return "usuarios";
     }
     
-    
+    /*
     @GetMapping("/login")
     public String login(Model model) {
         
@@ -61,5 +61,6 @@ public class HelloController {
         model.addAttribute("titulo", "Login");
         return "login";
     }
+     */
 }
 
